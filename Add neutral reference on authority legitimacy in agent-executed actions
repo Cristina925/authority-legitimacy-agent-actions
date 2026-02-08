@@ -1,0 +1,74 @@
+Authority Legitimacy in Agent-Executed Actions
+
+A recurring governance gap in autonomous and agent-based systems
+
+
+Overview
+
+As software systems evolve from passive tools into autonomous or semi-autonomous agents, a critical question has re-emerged across technical, legal, and governance contexts:
+
+By what authority was this action taken — and was that authority legitimate at the moment the action occurred?
+
+Many agent systems validate access (identity, tokens, permissions) but do not explicitly validate authority legitimacy at time-of-action, particularly when actions are executed through plugins, skills, tools, or chained workflows.
+
+This document isolates that gap.
+
+
+The Failure Pattern
+
+A recurring pattern is now observable across agent and plugin ecosystems:
+
+Delegated autonomous actions proceed under implicit or inherited authority rather than explicit, current, bounded authority.
+
+This occurs when an agent:
+- executes tools based on prior consent,
+- inherits permissions across sessions,
+- composes multiple capabilities into higher-impact actions,
+- or expands behaviour through updates,
+
+without re-establishing that authority remains valid for the specific action being taken.
+
+The result may be technically permitted action that is governance-illegitimate in retrospect.
+
+
+Common Manifestations
+
+This pattern appears as:
+- inherited permission drift,
+- capability escalation by composition,
+- unreviewed skill or tool updates,
+- high-impact actions without authority refresh,
+- assumptions that permission persists unless explicitly revoked.
+
+These are systemic conditions, not implementation bugs.
+
+
+The Minimum Authority Question Set
+
+Before an agent-executed action proceeds, a system should be able to answer — explicitly:
+
+1. What authority is being exercised by this action?
+2. Who (human or system) delegated that authority?
+3. What constraints bound it (scope, time, capability)?
+4. Is that authority still valid at this moment?
+5. Is the action reversible or consequential?
+
+If these cannot be answered, the action is operating under implicit authority.
+
+
+Scope and Boundaries
+
+This reference:
+- does not propose implementations,
+- does not recommend tools or controls,
+- does not assess compliance or correctness.
+
+It exists solely to make authority legitimacy in agent-executed actions recognisable, nameable, and discussable.
+
+
+Context
+
+This document represents a domain-specific slice of the broader parent doctrine Legible Authority for Autonomous Action (LAAA), which addresses authority legitimacy across autonomous systems more generally.
+
+
+This document is a neutral, descriptive reference intended to support shared recognition of a recurring governance failure mode.
